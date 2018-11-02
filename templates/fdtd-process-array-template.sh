@@ -18,7 +18,7 @@
 
 MPI_PATH="/global/home/groups-sw/nano/software/sl-7.x86_64/lumerical/fdtd-8.20.1661/mpich2/nemesis/bin/mpiexec"
 LUM_PATH="/global/home/groups-sw/nano/software/sl-7.x86_64/lumerical/fdtd-8.20.1661/bin/fdtd-engine-mpich2nem"
-EMAIL="christopherchen@lbl.gov"
+EMAIL="XXX@XXX.XXX"
 
 
 #Number of processes
