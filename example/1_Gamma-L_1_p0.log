@@ -1,0 +1,93 @@
+FDTD Solutions Version 8.20.1661 (Linux 64bit)
+ expires (month/day/year): 6/15/2019
+using config file: /global/home/users/christopherchen/.config/Lumerical/FDTD Solutions.ini
+license host: <a href=http://131.243.180.41:8095>131.243.180.41:8095</a>
+current time: Fri Nov  2 16:57:13 2018
+Running on host: n0046.nano1
+All processes are communicating and ready to proceed to simulation...
+Running fsp file: /global/home/groups-sw/nano/software/sl-7.x86_64/lumerical/fdtd-8.20.1661/bin/fdtd-engine-mpich2nem /global/home/users/christopherchen/fdtd-slurm-batch/example/1_Gamma-L_1.fsp
+This simulation has already been run, will run again.
+number of processors is 8
+processors are distributed as: 2x2x2
+Running 3D Simulation
+Starting meshing
+Simulation size in gridpoints: 16 x 16 x 16
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0.08 seconds of CPU time
+138624 138624
+Starting meshing
+Simulation size in gridpoints: 16 x 16 x 16
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0.07 seconds of CPU time
+138240 138240
+Starting meshing
+Simulation size in gridpoints: 16 x 16 x 16
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0.06 seconds of CPU time
+137328 137328
+finished material properties
+Meshing Time: 0.14597 seconds, Init Electrical Material Time: 0.824915 seconds, Init Magnetic Material Time: 3.6e-05
+Selecting 3d kernel for splitFieldDirection=0 and optLevel=2
+-----------------------------------------
+Beginning initialization of 3D Simulation
+Starting to add sources to simulation
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Adding 3D point source
+Starting to add boundary conditions to simulation
+Adding 3D Parallel bloch BC
+Adding 3D Parallel BC
+Adding 3D Parallel bloch BC
+Adding 3D Parallel BC
+Adding 3D Parallel bloch BC
+Adding 3D Parallel BC
+Starting to add monitors to Simulation
+Adding analysis monitor
+Adding analysis monitor
+Adding analysis monitor
+Adding 3D Time monitor
+Adding 3D Time monitor
+Adding 3D Time monitor
+Adding 3D Time monitor
+Adding 3D Time monitor
+Finished initialization of 3D Simulation
+-----------------------------------------
+All processes are communicating and ready to proceed to simulation...
+Starting 26889 total iterations
+0% complete. Max time remaining: 1 min, 52 secs. Auto Shutoff: 1
+2% complete. Max time remaining: 1 min, 44 secs. Auto Shutoff: 0.0659013
+3% complete. Max time remaining: 1 min, 43 secs. Auto Shutoff: 0.00737395
+4% complete. Max time remaining: 1 min, 42 secs. Auto Shutoff: 0.00195639
+5% complete. Max time remaining: 1 min, 41 secs. Auto Shutoff: 0.000278998
+7% complete. Max time remaining: 1 min, 37 secs. Auto Shutoff: 1.23193e-05
+7% complete. Max time remaining: 1 min, 37 secs. Auto Shutoff: 6.86492e-06
+100% complete. Max time remaining: 0 mins, 0 secs. Auto Shutoff: 6.86492e-06
+Early termination of simulation, the autoshutoff criteria are satisfied.
+Completed 1818 iterations, or 6.761215e-14s of Simulation Time
+Process 0 starting to collect data
+    collecting monitor data
+    collecting source data
+Finished collecting data
+Simulation completed successfully at: Fri Nov  2 16:57:22 2018
+Overall wall time measurements in seconds:
+    time to mesh and initialize: 2
+    time to run FDTD simulation: 7
+    time to finalize data and save to files: 0
+    FDTD solver speed: 1.06379 Mnodes/s
+    total FDTD solver speed on 8 processes: 8.51032 Mnodes/s

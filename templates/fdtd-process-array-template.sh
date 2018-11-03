@@ -40,6 +40,7 @@ shift
 
 # number of files 
 COUNT=$#
+((COUNT=COUNT-1))
 # list of fsp file paths
 FLIST="$@"
 

@@ -56,20 +56,35 @@ SHELLFILE="$SCRIPTDIR/slurmarray_`date +%N`.sh"
 # files are located in a subdirectory of the directory containing this 
 # script.
 
-# Initialize file list, bump to the next argument
-FLIST="$SCRIPTDIR/$1" 
-shift
+COUNT=$#
+echo "$COUNT file(s) submitted."
 
 # Loop over all remaining arguments
 while(( $# > 0 ))
 do
-    ## Adds the next arguments as full paths to the file lists
-    FLIST="$FLIST $SCRIPTDIR/$1"
+	# If this is the first file... 
+	if [[ "${FLIST: -1}" != " " ]]
+	then 
+		FLIST="$(readlink -f $1)"
+	elif [[ "${1: -4}" = ".fsp" ]]
+	then
+		## Adds the next arguments as full paths to the file lists
+		FLIST="$FLIST $(readlink -f $1)"
+	else
+		echo "$1 is not a valid Lumerical file."
+		((COUNT=COUNT-1))
+	fi
     shift
 done
 
-# Submit the list of files to the next script
-$SCRIPTDIR/templates/fdtd-process-array-template.sh $PROCS $TEMPLATE $FLIST > $SHELLFILE
+if((COUNT > 0))
+then
+	echo "$COUNT valid file(s) to be submitted to job array."
+	# Submit the list of files to the next script
+	$SCRIPTDIR/templates/fdtd-process-array-template.sh $PROCS $TEMPLATE $FLIST > $SHELLFILE
 
-# Run the Slurm job array
-sbatch $SHELLFILE
+	# Run the Slurm job array
+	sbatch $SHELLFILE
+else
+	echo "No valid Lumerical files."
+fi
