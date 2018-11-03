@@ -1,9 +1,0 @@
-Running file /global/home/users/christopherchen/fdtd-slurm-batch/example/1_Gamma-L_1.fsp
-0% complete. Max time remaining: 1 min, 52 secs. Auto Shutoff: 1
-2% complete. Max time remaining: 1 min, 44 secs. Auto Shutoff: 0.0659013
-3% complete. Max time remaining: 1 min, 43 secs. Auto Shutoff: 0.00737395
-4% complete. Max time remaining: 1 min, 42 secs. Auto Shutoff: 0.00195639
-5% complete. Max time remaining: 1 min, 41 secs. Auto Shutoff: 0.000278998
-7% complete. Max time remaining: 1 min, 37 secs. Auto Shutoff: 1.23193e-05
-7% complete. Max time remaining: 1 min, 37 secs. Auto Shutoff: 6.86492e-06
-Completed at Fri Nov  2 16:57:22 PDT 2018
