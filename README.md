@@ -4,8 +4,6 @@ These bash scripts help automate Lumerical FDTD file submission to a cluster run
 ## Usage
 `./fdtd-run-slurm-array.sh [-n number of processes] fsp_file_1 [fsp_file_2 ... fsp_file_N]`
 
-.fsp files should be located in the directory or a subdirectory of this script. I plan on modifying this later to allow for arbitrary file locations. 
-
 ## Changes from the script provided by Lumerical
 - Ported commands from PBS to Slurm 
 - Instead of creating a Slurm job for every .fsp file, a single .fsp file is created for use for submission as a Slurm job array
