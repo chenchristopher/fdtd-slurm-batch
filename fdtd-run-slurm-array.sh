@@ -59,17 +59,19 @@ SHELLFILE="$SCRIPTDIR/slurmarray_`date +%N`.sh"
 COUNT=$#
 echo "$COUNT file(s) submitted."
 
+FLIST=" "
 # Loop over all remaining arguments
 while(( $# > 0 ))
 do
 	# If this is the first file... 
-	if [[ "${FLIST: -1}" != " " ]]
+	if [ "${FLIST: -1}" = " " ]
 	then 
 		FLIST="$(readlink -f $1)"
-	elif [[ "${1: -4}" = ".fsp" ]]
+	elif [ "${1: -4}" = ".fsp" ]
 	then
 		## Adds the next arguments as full paths to the file lists
 		FLIST="$FLIST $(readlink -f $1)"
+
 	else
 		echo "$1 is not a valid Lumerical file."
 		((COUNT=COUNT-1))

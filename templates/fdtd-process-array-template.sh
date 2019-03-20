@@ -29,20 +29,20 @@ shift
 TEMPLATE_FILE=$1
 shift
 
-# FLIST=$1
-# shift
-# ((COUNT=0))
-# while (($# > 0)) ; do
-	# FLIST="$FLIST $1"
-	# ((COUNT=COUNT+1))
-	# shift
-# done
+FLIST=$1
+shift
+((COUNT=0))
+while (($# > 0)) ; do
+	FLIST="$FLIST $1"
+	((COUNT=COUNT+1))
+	shift
+done
 
 # number of files 
-COUNT=$#
-((COUNT=COUNT-1))
+#COUNT=$#
+#((COUNT=COUNT-1))
 # list of fsp file paths
-FLIST="$@"
+#FLIST="$@"
 
 # Replace items in template script
 sed -e "s#<n>#$PROCS#g" \

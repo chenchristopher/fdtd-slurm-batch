@@ -41,6 +41,6 @@ FILE_PATH=${FARRAY[$SLURM_ARRAY_TASK_ID]}
 
 echo "Running file $FILE_PATH"
 module unload openmpi
-module load lumerical/fdtd-8.20.1661
+module load lumerical
      $MPI_PATH $LUM_PATH $FILE_PATH;
 echo "Completed at `date`"
