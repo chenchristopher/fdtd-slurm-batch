@@ -1,31 +1,31 @@
 #!/bin/bash
 #Job name:
-#SBATCH --job-name=array_test
+#SBATCH --job-name=<jobname>
 #
 # Array definition
-# The number after the pound symbol is the number of 
+# The number after the pound symbol is the number of
 # concurrent processes that the array can run.
-# This can be used to prevent running out of engine 
+# This can be used to prevent running out of engine
 # licenses.
-#SBATCH --array=0-<numfiles>%5
+#SBATCH --array=0-<numfiles>%<numengines>
 #
 # Partition:
-#SBATCH --partition=nano1 --account=nano
+#SBATCH --partition=<partition> --account=<account>
 #
 # Processors:
 #SBATCH --ntasks=<n>
 #
 # Memory:
-#SBATCH --mem-per-cpu=4G
+#SBATCH --mem-per-cpu=<mem>
 #
 # Wall clock limit:
-#SBATCH --time=40:00:00
+#SBATCH --time=<timelimit>
 #
-# Mail type: (uncomment following line once to receive emails)
-##SBATCH --mail-type=all
+# Mail type:
+#SBATCH --mail-type=<mailtype>
 #
-# Mail user: (uncomment following line once to receive emails)
-##SBATCH --mail-user=<email>
+# Mail user:
+#SBATCH --mail-user=<email>
 
 ## Run command
 MPI_PATH="<mpipath>"
