@@ -1,0 +1,4 @@
+/slurmarray*.sh
+/slurm*.out
+/fsp/*
+/examples/*.log
