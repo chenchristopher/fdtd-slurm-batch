@@ -84,7 +84,7 @@ if((COUNT > 0))
 then
 	echo "$COUNT valid file(s) to be submitted to job array."
 	# Submit the list of files to the next script
-	echo $SCRIPTDIR/templates/fdtd-process-array-template.sh $PROCS $TEMPLATE $FLIST > $SHELLFILE
+	$SCRIPTDIR/templates/fdtd-process-array-template.sh $PROCS $TEMPLATE $FLIST > $SHELLFILE
 
 	# Run the Slurm job array
 	sbatch $SHELLFILE
