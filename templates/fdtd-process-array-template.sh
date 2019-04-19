@@ -24,15 +24,8 @@
 # <mem>									Amount of memory per cpu, e.g. 4G = 4GB
 ############################################################################################
 
-# MPI_PATH="/global/home/groups-sw/nano/software/sl-7.x86_64/lumerical/fdtd-8.20.1661/mpich2/nemesis/bin/mpiexec"
-# LUM_PATH="/global/home/groups-sw/nano/software/sl-7.x86_64/lumerical/fdtd-8.20.1661/bin/fdtd-engine-mpich2nem"
-# EMAIL="XXX@XXX.XXX"
-# MAIL_TYPE="NONE"
-# NUM_ENGINES=5
-# JOB_NAME="fdtd_array"
-
 #Including .ini file
-. ../user_settings.ini
+. $(dirname "$0")/../user_settings.ini
 
 #Number of processes
 PROCS=$1
@@ -58,17 +51,17 @@ done
 #FLIST="$@"
 
 # Replace items in template script
-sed -e "s#<nPROCS#g" \
+sed -e "s#<n>#$PROCS#g" \
     -e "s#<flist>#$FLIST#g" \
     -e "s#<email>#$EMAIL#g" \
     -e "s#<lumpath>#$LUM_PATH#g" \
     -e "s#<mpipath>#$MPI_PATH#g" \
-		-e "s#<numfiles>#$COUNT#g" \
-		-e "s#<numengines>#$NUM_ENGINES#g" \
-		-e "s#<mailtype>#$MAIL_TYPE#g" \
-		-e "s#<jobname>#$JOB_NAME#g" \
-		-e "s#<partition>#$PARTITION#g" \
-		-e "s#<account>#$ACCOUNT#g" \
-		-e "s#<timelimit>#$TIME_LIMIT#g" \
-		-e "s#<mem>#$MEMORY_PER_CPU#g" \
-		$TEMPLATE_FILE
+    -e "s#<numfiles>#$COUNT#g" \
+    -e "s#<numengines>#$NUM_ENGINES#g" \
+    -e "s#<mailtype>#$MAIL_TYPE#g" \
+    -e "s#<jobname>#$JOB_NAME#g" \
+    -e "s#<partition>#$PARTITION#g" \
+    -e "s#<account>#$ACCOUNT#g" \
+    -e "s#<timelimit>#$TIME_LIMIT#g" \
+    -e "s#<mem>#$MEMORY_PER_CPU#g" \
+    $TEMPLATE_FILE
