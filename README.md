@@ -1,11 +1,13 @@
 # fdtd-slurm-batch
 These bash scripts help automate Lumerical FDTD file submission to a cluster running the Slurm job scheduler.
 
-setup.sh allows you to add the directory to the PATH variable in .bashrc, reset your user_settings.ini file, and to modify your user_settings.ini file. 
 
 ## Usage
+To run simulations,  
 `fdtd-run-slurm-array.sh [-n number of threads per simulation] fsp_file_1 [fsp_file_2 ... fsp_file_N]`
 
+To set/reset your user settings, run  
+`setup_fdtd_slurm_batch.sh`
 
 ## User settings
 Change the values in user_settings.ini to modify the behavior of the script. 
