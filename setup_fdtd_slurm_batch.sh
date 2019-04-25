@@ -49,7 +49,7 @@ if ask "Would you like to add this dir to the path variable?"; then
     echo "export PATH=$SCRIPTDIR:$path" >> $HOME/.bashrc
 fi
 
-if ask "Would you like to reset the user settings to default values?"; then
+if ask "Would you like to reset the user settings to default values? (yes for first run)"; then
     rm "./user_settings.ini"
     cp "./templates/default_settings.ini" "./user_settings.ini"
 fi
